@@ -19,10 +19,13 @@ app.use(express.urlencoded({ limit: "20mb", extended: true }));
 app.use(cors());
 
 app.use("/rooms", rooms);
+
 app.use("/tasks", tasks);
+
 app.use("/user", user);
+
 app.get("/", (req, res) => {
-  res.send("Hello To Dailys Backend App");
+  res.send("");
 });
 
 mongoose.connect(process.env.MONGODB, {
